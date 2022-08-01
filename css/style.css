@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 999;
+    max-width: 185px;
+    width: 185px;
+    min-height: 100vh;
+    position: fixed;
+    background-color: #001633D9;
+}
+
+.navbar .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px 50px 30px;
+}
+
+.navbar .logo {
+    width: 100px;
+}
+
+.menu_hamburger{
+    display:none    
+}
+        
+.menu_hamburger+label {
+    position: relative;
+    top: 0;
+    width: 40px;
+    height: 5px;
+    display: flex;
+    background: #ff0613;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.menu_hamburger:checked+label {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.menu_hamburger+label:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(#ff0613 50%,transparent 50%);
+    left: 0;
+    top: -12px;
+}
+
+.menu_hamburger:checked+label:before {
+    top: 0;
+    height: 9px;
+}
+
+.menu_hamburger+label:after {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 7px;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(transparent 50%,#ff0613 50%);
+}
+.menu_hamburger:checked+label:after {
+    transform: rotate(-90deg) translate(5px,-5px);
+    top: 0px;
+}
+
+.menu_hamburger:hover+label:before {
+    background: linear-gradient(#fab942 50%,transparent 50%);
+}
+
+.menu_hamburger+label:hover {
+    background: #6b98d0 ;
+}
+
+.menu_hamburger:hover+label:after {
+    background: linear-gradient(transparent 50%,#f5a9b0 50%);
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px ;
+}
+
+.navbar li a i {
+    margin: 10px;
+}
+
+.navbar li:nth-child(1) a i {
+    color: #fab942;
+}
+
+.navbar li:nth-child(2) a i {
+    color: #6b98d0;
+}
+
+.navbar li:nth-child(3) a i {
+    color: #f5a9b0;
+}
+
+.navbar li a i:hover {
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #001633;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -100%;
+    transition: all 0.3s ease;
+}
+
+.menu .container {
+    padding: 40px 0px 40px 196px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.menu .container .cleft {
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.3fr;
+    grid-template-areas: 
+    "top"
+    "mid"
+    "bottom"
+    ;
+}
+
+.menu .container .cleft .top {
+    display: flex;
+}
+
+.menu .container .cleft .top .left {
+    width: 30%;
+    height: 100%;
+    background-image: url(https://www.thesandpaper.net/wp-content/uploads/2020/06/Fireworks-1-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 3px 0 0;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.menu .container .cleft .top .right {
+    width: 70%;
+    height: 100%;
+    background-image: url(https://media.istockphoto.com/photos/your-limo-is-waiting-picture-id115879280?k=20&m=115879280&s=612x612&w=0&h=GrNP6NzzC1TurfsC-PbtGOMgsAA6PSVwso7IsMWpTzc=);
+    background-position: right;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    margin: 0 0 0 3px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.menu .container .cleft .mid {
+    display: flex;
+}
+
+.menu .container .cleft .mid .left {
+    width:70%;
+    height: calc(100% - 12px);
+    background-color: pink;
+    background-image: url(https://media.istockphoto.com/photos/thailand-city-firework-picture-id1094010958?k=20&m=1094010958&s=612x612&w=0&h=KjT1eoQC2jiPLvXlf4VSXM0FowBm5zMkFz5uxWhWVPk=);
+    background-position: center;
+    background-size: cover;
+    margin: 6px 3px 0 0;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.menu .container .cleft .mid .right {
+    width: 30%;
+    height: calc(100% - 12px);
+    background-image: url(https://images.pexels.com/photos/230887/pexels-photo-230887.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 6px 0 0 3px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.menu .container .cleft .bottom {
+    display: flex;
+}
+
+.menu .container .cleft .bottom .left {
+    width:30%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.menu .container .cleft .bottom .right {
+    width: 70%;
+    height: 100%;
+    background-image: url(https://www.garage-auto.info/wp-content/uploads/2019/05/limousine.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.menu .container .left .top {
+    grid-area: "top";
+}
+
+.menu .container .left .mid {
+    grid-area: "mid";
+}
+
+.menu .container .left .bottom {
+    grid-area: "bottom";
+}
+
+.menu .container .cright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.menu .container .cright .content {
+    padding-left: 130px;
+}
+
+.menu .container .cright .content ul {
+    line-height: 100px;
+}
+
+.menu .container .cright .content ul li a {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.menu .container .cright .content ul li button {
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu .container .cright .content ul li button.btnun {
+    margin-right: 20px;
+    height: 70px;
+    width: 40%;
+    background-color: #ff0613;
+    color: white;
+}
+
+.menu .container .cright .content ul li button.btndeux {
+    margin-right: 20px;
+    height: 70px;
+    width: 35%;
+    background-color: white;
+    color: #ff0613;
+}
+
+.menu.clicked {
+    margin-left: 0;
+}
+
+.menu .container .cright .content ul li a div.redbarun {
+    position: relative;
+    top: 10px;
+    left: -200px;
+    height: 23px;
+    width: 23px;
+    background-color: #ff0613;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.menu .container .cright .content ul li a:hover div.redbarun {
+    width: 187px;
+}
+
+.menu .container .cright .content ul li a div.redbardeux {
+    position: relative;
+    top: 10px;
+    left: -252px;
+    height: 23px;
+    width: 23px;
+    background-color: #ff0613;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.menu .container .cright .content ul li a:hover div.redbardeux {
+    width: 244px;
+}
+
+.menu .container .cright .content ul li a div.redbartrois {
+    position: relative;
+    top: 10px;
+    left: -268px;
+    height: 23px;
+    width: 23px;
+    background-color: #ff0613;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.menu .container .cright .content ul li a:hover div.redbartrois {
+    width: 254px;
+}
+
+.menu .container .cright .content ul li a div.redbarquatre {
+    position: relative;
+    top: 10px;
+    left: -310px;
+    height: 23px;
+    width: 23px;
+    background-color: #ff0613;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.menu .container .cright .content ul li a:hover div.redbarquatre {
+    width: 304px;
+}
+
+.menu .container .cright .content ul li a div.redbarcinq {
+    position: relative;
+    top: 10px;
+    left: -243px;
+    height: 23px;
+    width: 23px;
+    background-color: #ff0613;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.menu .container .cright .content ul li a:hover div.redbarcinq {
+    width: 237px;
+}
+
+.menu .container .cright .content ul li a {
+    display: flex;
+    align-items: baseline;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    color: #ff0613
+}
+
+
+
+
+.tess {
+    position: absolute;
+    z-index: -999;
+    height: 100vh;
+    width: 100vw;
+    background-color: #001633;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desse Event</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://kit.fontawesome.com/4f31b71947.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+
+<div class="navbar">
+    <div class="container">
+        <a href="#"><img class="logo" src="./img/logo.png" alt=""></a>
+        <input class="menu_hamburger" type="checkbox" id="check">
+        <label for="check" id="label" onclick="clicklabel()"></label>
+        <ul>
+            <li><a href=""><i class="fa-solid fa-location-dot fa-2x"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="container">
+        <div class="cleft">
+            <div class="top">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="mid">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="bottom">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+
+
+
+        <div class="cright">
+            <div class="content">
+                <ul>
+                    <li><a href="#"><div class="icon"><i class="fa-solid fa-house"></i></div> PAGE UN <div class="redbarun"></div></a></li>
+                    <li><a href="#"><div class="icon"><i class="fa-solid fa-fire-flame-curved"></i></div> PAGE DEUX <div class="redbardeux"></div></a></li>
+                    <li><a href="#"><div class="icon"><i class="fa-solid fa-truck-fast"></i></div> PAGE TROIS <div class="redbartrois"></div></a></li>
+                    <li><a href="#"><div class="icon"><i class="fa-solid fa-location-dot"></i></div> PAGE QUATRE <div class="redbarquatre"></div></a></li>
+                    <li><a href="#"><div class="icon"><i class="fa-solid fa-envelope"></i></div> PAGE CINQ <div class="redbarcinq"></div></a></li>
+                    <li><div class="deuxbtn">
+                        <button class="btnun">PREMIER BTN</button>
+                        <button class="btndeux">DEUX BTN</button>
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tess"></div>
+
+<script type="text/javascript">
+
+var navLinks = document.querySelector(".menu");
+
+function clicklabel() {
+    navLinks.classList.toggle('clicked');
+}
+
+</script>
+
+</body>
+</html>
